@@ -60,5 +60,62 @@ ${contributing}.
 ${tests}
 
 ## Questions
-${questions}
-`
+${questions.github}
+${questions.email}
+`;
+
+// Pull data from the uses inputs to dynamically create a readme file
+const generateReadme = () => {
+  return inquirer.prompt([
+    {
+      type: 'input',
+      message: 'What is the title of your project?',    
+      name: 'title',
+    },
+    {
+      type: 'input',
+      message: 'Provide a brief description of your project:',
+      name: 'description',    
+    },
+    {
+      type: 'input',
+      message: 'Provide instructions and examples for use:',
+      name: 'usage',    
+    },
+    {
+      type: 'checkbox',
+      message: 'Please choose a license',
+      name: 'license',    
+    },
+    {
+      type: 'input',
+      message: 'How should user contribute?',
+      name: 'contributing',    
+    },
+    {
+      type: 'input',
+      message: '',
+      name: 'test',    
+    },
+    {
+      type: 'input',
+      message: 'What is your GitHub username?',
+      name: 'github',
+    },
+    {
+      type: 'input',
+      message: 'What is your email address?',
+      name: 'email',
+    }
+  ]); 
+};
+
+const init = () => {
+  generateReadme();
+  // Use File System to generate the readme file
+  .then((response) => fs.writeFileSync('README.md', readmeJamboree(response)))
+  .then(() => console.log("Get out your maracas, we did it!"))
+  .catch((error) => console.error(error));    
+};
+
+init();
