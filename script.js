@@ -67,7 +67,7 @@ const generatePortfolio = () => {
 
 // Bonus using writeFileSync as a promise
 const init = () => {
-  generatePortfolio() 
+  generatePortfolio(); 
   // Use the File System to generate the HTML file
   .then((response) => fs.writeFileSync('portfolio.html', portfolioHTML(response)))
   .then(() => console.log('Success on line 73!'))

@@ -17,7 +17,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const readmeJamboree = ({ title, description, instructions, usage, license, contributing, tests, questions}) => 
+const readmeJamboree = ({ title, description, instructions, usage, license, contributing, tests, github, email}) => 
 
 `
 # ${title}
@@ -60,8 +60,8 @@ ${contributing}.
 ${tests}
 
 ## Questions
-${questions.github}
-${questions.email}
+${github}
+${email}
 `;
 
 // Pull data from the uses inputs to dynamically create a readme file
@@ -86,6 +86,17 @@ const generateReadme = () => {
       type: 'checkbox',
       message: 'Please choose a license',
       name: 'license',    
+      choices: [
+        {
+          name: 'MIT',
+        },
+        {
+          name: 'Apache License',
+        },
+        {
+          name: 'GPL License', 
+        }
+    ],
     },
     {
       type: 'input',
@@ -94,7 +105,7 @@ const generateReadme = () => {
     },
     {
       type: 'input',
-      message: '',
+      message: 'Run some tests.',
       name: 'test',    
     },
     {
@@ -111,7 +122,7 @@ const generateReadme = () => {
 };
 
 const init = () => {
-  generateReadme();
+  generateReadme()
   // Use File System to generate the readme file
   .then((response) => fs.writeFileSync('README.md', readmeJamboree(response)))
   .then(() => console.log("Get out your maracas, we did it!"))
