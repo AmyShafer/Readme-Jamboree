@@ -22,7 +22,6 @@ const licenseInfo = require('./licenses.js');
 const readmeJamboree = function ({ title, description, instructions, usage, license, contributing, tests, github, email }) {
   console.log(license);
   const licenseIndex = licenseInfo(license);
-  console.log(licenseIndex);
   return `
 # ${title}
 
@@ -46,8 +45,7 @@ ${instructions}
 
 Here's a look at the application in action:
 
-<img src="${usage}" width="490" height="340" alt="${title}/>
-[img](imagepathhere)
+![${title}](/assets/images/${usage})
 
 ## License
 
@@ -65,7 +63,7 @@ ${tests}
 
 If you have any questions, you can visit my GitHub Page at <a href="https://github.com/${github}" target="_blank">${github}</a>.
 
-You can also email me at < ${email} >.
+You can also email me at ${email}.
 `};
 
 const init = () => {
