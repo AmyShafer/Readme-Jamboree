@@ -17,54 +17,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const readmeJamboree = function ({ title, description, instructions, usage, license, contributing, tests, github, email }) {
-  console.log(license.name);
-  return `
-# ${title}
-
-${description}
-
-## Table of contents
-* [Install-Instructions](#install-instructions)
-* [Usage](#usage)
-* [License](#license)
-* [Contributing](#contributing)
-* [Tests](#tests)
-* [Questions](#questions)
-* [![Made for - Penn LPS](https://img.shields.io/static/v1?label=Made+for&message=Penn+LPS&color=%23FF1493)](https://bootcamp.sas.upenn.edu/)
-* [![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com)
-
-## Install Instructions
-
-${instructions}
-
-## Usage
-
-Here's a look at the application in action:
-
-<img src="${usage}" width="490" height="340" alt="${title}/>
-
-## License
-
-${license}
-${licenseChoices[0].section}
-${licenseChoices[0].badge}
-
-## Contributing
-
-${contributing}
-
-## Tests
-
-${tests}
-
-## Questions
-ß
-If you have any questions, you can visit my GitHub Page at <a href="https://github.com/${github}" target="_blank">${github}</a>.
-
-You can also email me at <${email}>.
-`};
-
 const licenseChoices = [
   {
     name: 'MIT',
@@ -82,6 +34,55 @@ const licenseChoices = [
     section: 'GNU GENERAL PUBLIC LICENSE - Version 3, - Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> - Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.'
   },
 ]
+
+const readmeJamboree = function ({ title, description, instructions, usage, license, contributing, tests, github, email }) {
+  console.log(license);
+  const licenseIndex = addLicenseBadge(licenseChoices, license);
+  console.log(licenseIndex);
+  return `
+# ${title}
+
+${description}
+
+## Table of contents
+* [Install-Instructions](#install-instructions)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
+* [![Made for Penn LPS](https://img.shields.io/static/v1?label=Made+for&message=Penn+LPS&color=%23005bbc)](https://bootcamp.sas.upenn.edu/)
+* [![Made with JavasScript](https://img.shields.io/static/v1?label=Made+with&message=JavaScript&color=%23FFd600)](https://www.javascript.com)
+
+## Install Instructions
+
+${instructions}
+
+## Usage
+
+Here's a look at the application in action:
+
+<img src="${usage}" width="490" height="340" alt="${title}/>
+
+## License
+
+${licenseChoices[licenseIndex].section}
+${licenseChoices[licenseIndex].badge}
+
+## Contributing
+
+${contributing}
+
+## Tests
+
+${tests}
+
+## Questions
+
+If you have any questions, you can visit my GitHub Page at <a href="https://github.com/${github}" target="_blank">${github}</a>.
+
+You can also email me at <${email}>.
+`};
 
 // Pull data from the uses inputs to dynamically create a readme file
 const generateReadme = () => {
@@ -144,6 +145,16 @@ const generateReadme = () => {
     }
   ]); 
 };
+
+function addLicenseBadge (licensesArray, licenseSelected) {
+  for (let i = 0; i < licensesArray.length; i++) {
+    const currentLicense = licensesArray[i];
+    if (currentLicense.name === licenseSelected) {
+      return i;
+    } 
+  }  
+  return "Invalid Choice."; 
+}
 
 const init = () => {
   generateReadme()
