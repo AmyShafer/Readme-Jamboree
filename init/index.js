@@ -14,6 +14,7 @@
 // ✅ I click on the links in the Table of Contents
 // ✅ I am taken to the corresponding section of the README
 
+const inquirer = require('inquirer');
 const fs = require('fs');
 const generateReadme = require('./generateReadme.js');
 const readmeLicense = require('./licenses.js');
