@@ -1,7 +1,7 @@
 
-# Red
+# Sweatin' to the Oldies
 
-Red
+Get ready for 25-minutes of low-impact aerobics!
 
 ## Table of contents
 * [Install-Instructions](#install-instructions)
@@ -15,13 +15,13 @@ Red
 
 ## Install Instructions
 
-Red
+Be sure to stretch and warm up to prevent soreness and injury!
 
 ## Usage
 
 Here's a look at the application in action:
 
-<img src="Red" width="490" height="340" alt="Red/>
+<img src="richard.png" width="490" height="340" alt="Sweatin' to the Oldies/>
 
 ## License
 
@@ -30,14 +30,14 @@ MIT License - Copyright (c) [2022] - Permission is hereby granted, free of charg
 
 ## Contributing
 
-Red
+Stay hydrated while you exercise.
 
 ## Tests
 
-Red
+Ok, sure
 
 ## Questions
 
-If you have any questions, you can visit my GitHub Page at <a href="https://github.com/Red" target="_blank">Red</a>.
+If you have any questions, you can visit my GitHub Page at <a href="https://github.com/milton-teagle" target="_blank">milton-teagle</a>.
 
-You can also email me at <red@red.com>.
+You can also email me at <richard.simmons@gmail.com>.
