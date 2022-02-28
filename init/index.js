@@ -18,11 +18,10 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generateReadme = require('./generateReadme.js');
 const licenseInfo = require('./licenses.js');
-const licenseChoices = require('./licenses.js');
 
 const readmeJamboree = function ({ title, description, instructions, usage, license, contributing, tests, github, email }) {
   console.log(license);
-  const licenseIndex = licenseInfo(licenseChoices, license);
+  const licenseIndex = licenseInfo(license);
   console.log(licenseIndex);
   return `
 # ${title}
@@ -51,8 +50,7 @@ Here's a look at the application in action:
 
 ## License
 
-${licenseChoices[licenseIndex].section}
-${licenseChoices[licenseIndex].badge}
+${licenseInfo(license)}
 
 ## Contributing
 
