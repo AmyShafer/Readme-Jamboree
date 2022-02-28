@@ -1,7 +1,7 @@
 
-# Richard
+# R
 
-Richard
+R
 
 ## Table of contents
 * [Install-Instructions](#install-instructions)
@@ -15,13 +15,13 @@ Richard
 
 ## Install Instructions
 
-Richard
+R
 
 ## Usage
 
 Here's a look at the application in action:
 
-<img src="Richard" width="490" height="340" alt="Richard/>
+<img src="R" width="490" height="340" alt="R/>
 
 ## License
 
@@ -29,14 +29,14 @@ MIT License - Copyright (c) [2022] - Permission is hereby granted, free of charg
 
 ## Contributing
 
-Richard
+R
 
 ## Tests
 
-Richard
+R
 
 ## Questions
 
-If you have any questions, you can visit my GitHub Page at <a href="https://github.com/Richard" target="_blank">Richard</a>.
+If you have any questions, you can visit my GitHub Page at <a href="https://github.com/R" target="_blank">R</a>.
 
-You can also email me at <Richard>.
+You can also email me at < R >.

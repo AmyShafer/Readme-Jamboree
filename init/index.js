@@ -47,6 +47,7 @@ ${instructions}
 Here's a look at the application in action:
 
 <img src="${usage}" width="490" height="340" alt="${title}/>
+[img](imagepathhere)
 
 ## License
 
@@ -64,7 +65,7 @@ ${tests}
 
 If you have any questions, you can visit my GitHub Page at <a href="https://github.com/${github}" target="_blank">${github}</a>.
 
-You can also email me at <${email}>.
+You can also email me at < ${email} >.
 `};
 
 const init = () => {
