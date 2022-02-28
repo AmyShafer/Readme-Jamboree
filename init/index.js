@@ -21,7 +21,7 @@ const readmeLicense = require('./licenses.js');
 
 const readmeJamboree = function ({ title, description, instructions, usage, license, contributing, tests, github, email }) {
   console.log(license);
-  const licenseIndex = addLicenseBadge(licenseChoices, license);
+  const licenseIndex = licenseInfo(license);
   console.log(licenseIndex);
   return `
 # ${title}

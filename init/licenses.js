@@ -1,5 +1,9 @@
-// the array of licenses the user can choose from
-const licenseChoices = [
+const inquirer = require('inquirer');
+
+function licenseInfo (licenseSelected) {
+
+  // the array of licenses the user can choose from
+  const licenseChoices = [
     {
       name: 'MIT',
       badge: '* [![GitHub license](https://badgen.net/github/license/Naereen/Strapdown.js)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)',
@@ -15,12 +19,11 @@ const licenseChoices = [
       badge: '* [![Npm package license](https://badgen.net/npm/llicense/discord.js)](https://npmjs.com/package/discord.js)',
       section: 'GNU GENERAL PUBLIC LICENSE - Version 3, - Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> - Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.'
     },
-]
+  ]
 
-function licenseInfo (licenseArray, licenseSelected) {
   // loop through the licenses array and find a match with the selected license
-  for (let i = 0; i < licenseArray.length; i++) {
-    const currentLicense = licenseArray[i];
+  for (let i = 0; i < licenseChoices.length; i++) {
+    const currentLicense = licenseChoices[i];
       if (currentLicense.name === licenseSelected) {
         return i;
       } 
