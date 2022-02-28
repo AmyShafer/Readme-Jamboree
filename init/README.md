@@ -1,7 +1,7 @@
 
-# Sweatin' to the Oldies
+# Queen
 
-Get ready for 25-minutes of low-impact aerobics.
+Freddie
 
 ## Table of contents
 * [Install-Instructions](#install-instructions)
@@ -15,29 +15,30 @@ Get ready for 25-minutes of low-impact aerobics.
 
 ## Install Instructions
 
-Be sure to warm-up with us before attempting the more strenuous parts of the DVD or VHS tape.
+Brian
 
 ## Usage
 
 Here's a look at the application in action:
 
-<img src="richard.png" width="490" height="340" alt="Sweatin' to the Oldies/>
+<img src="Roger" width="490" height="340" alt="Queen/>
 
 ## License
 
-undefined
-undefined
+MIT
+MIT License - Copyright (c) [2022] - Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the Software), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: - The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. - THE SOFTWARE IS PROVIDED AS IS, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+* [![GitHub license](https://badgen.net/github/license/Naereen/Strapdown.js)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 
 ## Contributing
 
-Users should stay hydrated during their exercise.
+John
 
 ## Tests
 
-Ok, sure.
+March of the Black Queen
 
 ## Questions
+ß
+If you have any questions, you can visit my GitHub Page at <a href="https://github.com/Princes of the Universe" target="_blank">Princes of the Universe</a>.
 
-If you have any questions, you can visit my GitHub Page at <a href="https://github.com/milton-teagle" target="_blank">milton-teagle</a>.
-
-You can also email me at <richard-simmons@gmail.com>.
+You can also email me at <dontloseyourhead>.
