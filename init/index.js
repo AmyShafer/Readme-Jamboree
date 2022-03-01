@@ -6,7 +6,7 @@ const licenseInfo = require('./licenses.js');
 
 // creates readme based on user input
 const readmeJamboree = function ({ title, description, instructions, usage, license, contributing, tests, github, email }) {
-  console.log(license);
+  console.log("License selected: " + license);
   licenseInfo(license);
   return `
 # ${title}
@@ -56,9 +56,13 @@ You can also email me at ${email}.
 const init = () => {
   generateReadme()
   // Use File System to generate the readme file
-  .then((response) => fs.writeFileSync('README.md', readmeJamboree(response)))
-  .then(() => console.log("Get out your maracas, we did it!"))
-  .catch((error) => console.error(error));    
+  .then((response) => fs.writeFile('./output/RichardReadME.md', readmeJamboree(response), function (err) {
+    if (err) {
+      throw err;
+    }
+  }))
+  // .then(() => console.log("Get out your maracas, we did it!"))
+  // .catch((error) => console.error(error));    
 };
 
 init();
