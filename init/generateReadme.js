@@ -20,12 +20,12 @@ const generateReadme = () => {
     },
     {
       type: 'input',
-      message: 'Provide the file name for a screenshot of your project',
+      message: 'Provide the file name for a screenshot of your project:',
       name: 'usage',    
     },
     {
       type: 'list',
-      message: 'Please choose a license',
+      message: 'Please choose a license:',
       name: 'license',    
       choices: [
         {

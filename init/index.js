@@ -6,6 +6,7 @@ const licenseInfo = require('./licenses.js');
 
 // creates readme based on user input
 const readmeJamboree = function ({ title, description, instructions, usage, license, contributing, tests, github, email }) {
+  console.log(license);
   licenseInfo(license);
   return `
 # ${title}
